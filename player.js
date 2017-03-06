@@ -4,11 +4,9 @@ function Player(name){
   this.score = 0;
   this.hitChance = 0;
 
-  this.updateScore = function(integer){
-    let _newScore = this.score + integer;
-
+  this.updateScore = function(points){
+    let _newScore = this.score + points;
     if (_newScore < 0) { _newScore = 0; };
-
     this.score = _newScore;
   }
 
