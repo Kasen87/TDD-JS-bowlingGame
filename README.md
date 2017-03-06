@@ -74,6 +74,20 @@ The vague goal is to build a simple bowling game that will ask for up to four pl
 ## frame.js _(Phase I)_
 - Phase I
   - Test for init values
+    - 10 pins at start
+    - 2 attempts if normal
+    - 3 attempts if final
+  - Test for pin adjustments
+    - can increase
+    - can decrease
+    - stays above -1
+    - stays below -11
+    - equals 10 if reset is called
+  - Test for miss chance adjustment
+    - increases as pin count drops
+    - decreases as pin count rises
+    - stays above 18% (arbitrary)
+    - stays below 82% (arbitrary)
 
 ## scoreBoard.js _(...)_
 - Phase I
