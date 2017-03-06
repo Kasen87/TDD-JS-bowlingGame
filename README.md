@@ -56,33 +56,32 @@ The vague goal is to build a simple bowling game that will ask for up to four pl
 
 
 
-## Current File Progress
-### bowlingGame.js _(Phase I)_
-- Phase I
-  - Test for Successful Init
+# Current File Progress
 
-### player.js _(Phase II)_
+## player.js _(Phase II)_
 - Phase I
   - Test for init values
   - Test for score changes
   - Test for score reset to 0
 - Phase II
+  - Test for hitChance randomness
+  - Test for hitChance changes
+- Phase III
   - Test for score encapsulation
   - Test for name encapsulation
   - Test for hitChance encapsulation
-  - Test for hitChance randomness
-  - Test for hitChance changes
 
-### frame.js _(Phase I)_
+## frame.js _(Phase I)_
 - Phase I
   - Test for init values
 
-### scoreUtility.js _(Phase I)_
+## scoreBoard.js _(...)_
 - Phase I
   - Test for init values
 
+## bowlingGame.js _(...)_
+- Phase I
+  - Test for Successful Init
 
-
-
-### More Objects?
+## More Objects?
 - Maybe?
