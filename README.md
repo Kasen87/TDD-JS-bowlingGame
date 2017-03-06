@@ -56,11 +56,11 @@ The vague goal is to build a simple bowling game that will ask for up to four pl
     - have a chance to miss value (depends on remaining pin count)
   
   - Pins
-    - have a worth
-  
+    
   - A Bowling Action
   
   - Score Processing
+    - has a value for pins
     - has a modifier value for a spare
     - has a modifier value for a strike
     - has a modifier value for multiple strikes on final frame-parts
