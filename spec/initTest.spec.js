@@ -28,10 +28,12 @@ describe("BowlingGame", function(){
 describe("Player", function(){
   var Player = require('../player.js');
 
+  //On init of Player
   var playerName = "eleni";
   var player = new Player(playerName);
-
-  describe("Player Is Initialized", function(){
+  
+  //Should have name, score of 0, and a random chance to hit
+  describe("A player is initialized", function(){
     it("has a name", function(){
       expect(player.name).toEqual(playerName);
     })
@@ -39,7 +41,13 @@ describe("Player", function(){
     it("has a score of zero", function(){
       expect(player.score).toEqual(0);
     })
+
+    it("has a random chance to hit pins", function(){
+      expect(player.hitChance).toBeLessThan(1.1);
+      expect(player.hitChance).toBeGreaterThan(-0.1);
+    })
   })
+
 })
 
 
