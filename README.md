@@ -5,13 +5,24 @@ This project is my first introduction into TDD processes thanks to Eleni.
 The vague goal is to build a simple bowling game that will ask for up to four players and then process their turns for them to determine a *random* victor.
 
 ## Current File Progress
-- *bowlingGame.js* _(in-progress)_
+### bowlingGame.js _(Phase I)_
   - Test for Successful Init
   - Test for Successful Bowl Action
-- *player.js* _(in-progress)_
-  - Test for successful Init
-  - Test for successful score change
-- *More Objects?*
+
+### player.js _(Phase II)_
+  - Phase I
+    - Test for init values
+    - Test for score changes
+    - Test for score reset to 0
+  - Phase II
+    - Test for score encapsulation
+    - Test for name encapsulation
+    - Test for hitChance encapsulation
+    - Test for hitChance randomness
+    - Test for hitChance changes
+
+
+### More Objects?
 
 
 ## Real-Life Models
@@ -56,11 +67,15 @@ The vague goal is to build a simple bowling game that will ask for up to four pl
     - have a chance to miss value (depends on remaining pin count)
   
   - Pins
-    - have a worth
-  
+    
   - A Bowling Action
   
   - Score Processing
+    - has a value for pins
     - has a modifier value for a spare
     - has a modifier value for a strike
     - has a modifier value for multiple strikes on final frame-parts
+
+
+
+##
