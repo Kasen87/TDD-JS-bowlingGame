@@ -49,17 +49,22 @@ describe("Player", function(){
 
   //Should manage their own scores
   describe("The player score", function(){
-    var points = 3;
-    var score = player.score;
+    var points = Math.floor(Math.random() * 10);
+    var _score;
+
+    beforeEach( function(){
+      player.score = 10;
+      _score = player.score;
+    })
 
     it("should go up", function(){
       player.updateScore(points);
-      expect(player.score).toEqual(score + points);
+      expect(player.score).toEqual(_score + points);
     })
   
     it("should go down", function(){
       player.updateScore(-points);
-      expect(player.score).toEqual(score - points);
+      expect(player.score).toEqual(_score - points);
     })
     
     it("shouldn't go below 0", function(){
@@ -68,9 +73,6 @@ describe("Player", function(){
     })
     
     it("should reset to initial score of 0", function(){
-      player.updateScore(15);
-      expect(player.score).toEqual(score + 15)
-
       player.resetScore();
       expect(player.score).toEqual(0);
     })
