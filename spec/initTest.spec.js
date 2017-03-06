@@ -34,15 +34,15 @@ describe("Player", function(){
   
   //Should have name, score of 0, and a random chance to hit
   describe("A player is initialized", function(){
-    it("has a name", function(){
+    it("and has a name", function(){
       expect(player.name).toEqual(playerName);
     })
 
-    it("has a score of zero", function(){
+    it("and has a score of zero", function(){
       expect(player.score).toEqual(0);
     })
 
-    it("has a random chance to hit pins", function(){
+    it("and has a random chance to hit pins", function(){
       expect(player.hitChance).toBeLessThan(1.1);
       expect(player.hitChance).toBeGreaterThan(-0.1);
     })
@@ -50,10 +50,33 @@ describe("Player", function(){
 
   //Should manage their own scores
   describe("The player score", function(){
-    //should increase
-    //should decrease
-    //should min out at 0
-    //should reset to initial value of 0
+    var points = 1;
+    var score = player.score;
+
+    beforeEach( function(){
+      _score = score;
+    })
+
+    it("should go up", function(){
+      player.updateScore(points);
+      expect(player.score).toEqual(_score + points);
+    })
+  
+    it("should go down", function(){
+      player.updateScore(-points);
+      expect(player.score).toEqual(_score - points);
+    })
+    
+    it("shouldn't go below 0", function(){
+      player.updateScore(-1000);
+      expect(player.score).not.toBeLessThan(0);
+    })
+    
+    it("should reset to initial score of 0", function(){
+      player.resetScore();
+      expect(player.score).toEqual(0);
+      expect(player.name).toEqual(playerName);
+    })
   })
 })
 
