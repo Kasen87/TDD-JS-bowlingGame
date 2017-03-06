@@ -48,6 +48,13 @@ describe("Player", function(){
     })
   })
 
+  //Should manage their own scores
+  describe("The player score", function(){
+    //should increase
+    //should decrease
+    //should min out at 0
+    //should reset to initial value of 0
+  })
 })
 
 
