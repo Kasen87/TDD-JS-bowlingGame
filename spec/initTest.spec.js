@@ -119,7 +119,8 @@ describe("A frame", function(){
 
     it("increases as pin count goes down", function(){
       frame.adjustPins(-3)
-      expect(frame.missChance).toEqual(30.8);
+      console.log(frame.pinCount);
+      expect(frame.missChance).toEqual(82 - 12.8);
     })
 
     it("doesn't go above 82%", function(){
@@ -130,7 +131,7 @@ describe("A frame", function(){
 
     it("decreases as pin count goes up", function(){
       frame.adjustPins(3);
-      expect(frame.missChance).toEqual(69.2)
+      expect(frame.missChance).toEqual(30.8);
     })
 
     it("doesn't go below 18%", function(){
